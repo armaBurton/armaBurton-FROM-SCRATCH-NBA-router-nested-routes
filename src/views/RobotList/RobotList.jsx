@@ -1,9 +1,11 @@
 import { useRUARobotContext } from '../../context/RUARobotProvider';
+import { Route } from 'react-router-dom';
 import style from './RobotList.css';
 import RobotCard from '../RobotCard/RobotCard';
 import { useHistory, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import robotFetch from '../../services/robotFetch';
+import RobotDetail from '../RobotDetail/RobotDetail';
 
 export default function RobotList(){
   const location = useLocation();
@@ -61,7 +63,12 @@ export default function RobotList(){
               ? <h1>Beep Beep Boop...Computing</h1> 
             : robots.map((robot, i) => <RobotCard key={`${robot}${i}`} robot={robot} i={i}  />)
           }
-        </div>
+      </div>
+      <div className={style.nestedRoute}>
+        <Route path='/robots/:id'>
+          <RobotDetail />
+        </Route>
+      </div>
       </section>
   );
 }

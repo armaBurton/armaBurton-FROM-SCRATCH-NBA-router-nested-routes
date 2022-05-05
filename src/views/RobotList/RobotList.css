@@ -1,13 +1,16 @@
 .meetMyRobots{
   width: 900px;
-  height: 100vh;
+  height: 100%;
   background-color: steelblue;
   margin-top: 220px;
-  display: flex;
+  padding-right: 50px;
+  /* display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: center; */
   gap: 50px;
+  display:grid;
+  grid-template-columns: 1fr 1fr;
   /* padding-top: 30px; */
 }
 
@@ -31,6 +34,7 @@
 
 .cards{
   padding-top: 80px;
+  padding-left: 50px;
   display: flex;
   justify-content: center;
   gap: 30px;
