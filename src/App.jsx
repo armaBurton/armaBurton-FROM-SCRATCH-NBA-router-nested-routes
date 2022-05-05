@@ -40,9 +40,9 @@ export default function App() {
       </header>
 
       <Switch>
-        <Route path='/robots/:id'>
+        {/* <Route path='/robots/:id'>
           <RobotDetail />
-        </Route>
+        </Route> */}
         <Route path='/robots'>
           <RobotList />
         </Route>
